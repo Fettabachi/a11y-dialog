@@ -11,7 +11,7 @@
 
             <p>
                 <a href="https://a11y-dialog.netlify.app">Documentation ↗</a> — <a href="https://github.com/KittyGiraudel/a11y-dialog">GitHub ↗</a> —
-                <button class="link-like" data-a11y-dialog="my-test-dialog">
+                <button class="link-like" data-a11y-dialog-show="my-test-dialog">
                     <span>Open the dialog window</span>
                 </button>
             </p>
@@ -42,7 +42,7 @@
             </footer>
         </main>
 
-        <div class="dialog-container" id="my-test-dialog" aria-hidden="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-description">
+        <div class="dialog-container" id="my-test-dialog" data-a11y-dialog="my-test-dialog" aria-hidden="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-description">
             <div class="dialog-overlay" data-a11y-dialog-hide></div>
             <div class="dialog-content" role="document">
                 <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
