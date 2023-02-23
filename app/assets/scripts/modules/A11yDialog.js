@@ -37,13 +37,13 @@ class A11yDialog {
 
     preventBodyScroll() {
         document.body.classList.add("body-no-scroll");
-        this.isOverlayOpen = true;
+        this.isDialogOpen = true;
         return false;
     }
 
     allowBodyScroll() {
         document.body.classList.remove("body-no-scroll");
-        this.isOverlayOpen = false;
+        this.isDialogOpen = false;
         return false;
     }
 
