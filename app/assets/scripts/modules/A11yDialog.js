@@ -32,7 +32,7 @@ class A11yDialog {
             });
         });
 
-        document.addEventListener("keydown", (e) => this.allowBodyScroll());
+        document.addEventListener("keydown", (e) => this.keyPressDispatcher());
     }
 
     preventBodyScroll() {
