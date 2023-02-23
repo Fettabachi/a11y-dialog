@@ -5,6 +5,7 @@ class A11yDialog {
     constructor() {
         this.openDialogButton = document.querySelectorAll(".dialog-open");
         this.closeDialogButton = document.querySelectorAll(".dialog-close");
+        this.dialogOverlay = document.querySelectorAll(".dialog-overlay");
         this.isDialogOpen = false;
         this.events();
     }
@@ -24,7 +25,14 @@ class A11yDialog {
             });
         });
 
-        document.addEventListener("keydown", (e) => this.keyPressDispatcher(e));
+        this.dialogOverlay.forEach((el) => {
+            el.addEventListener("click", (e) => {
+                e.preventDefault();
+                this.allowBodyScroll();
+            });
+        });
+
+        document.addEventListener("keydown", (e) => this.allowBodyScroll());
     }
 
     preventBodyScroll() {
