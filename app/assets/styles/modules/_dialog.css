@@ -233,3 +233,7 @@ form button:hover,
 form button:active {
     background-color: #66bb6a;
 }
+
+.body-no-scroll {
+        overflow-y: hidden;
+}
